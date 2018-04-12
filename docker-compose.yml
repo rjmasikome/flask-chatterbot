@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+
+  chatterbot-flask:
+    container_name: chatterbot-flask
+    restart: always
+    expose:
+      - 3115
+    ports:
+      - "3115:3115"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: rjmasikome/chatterbot-flask
